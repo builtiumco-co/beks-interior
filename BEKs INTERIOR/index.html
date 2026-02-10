@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Luxury interior design services transforming residential and commercial spaces with timeless elegance and contemporary aesthetics.">
+    <title>Transform Your Space with Timeless Design | Luxe Interiors</title>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="images/optimized/spacejoy-XpbtQfr9Skg-unsplash.webp" type="image/webp">
+
+    <!-- Critical CSS inlined for fastest render -->
+    <style>
+        /* Critical CSS - Above the fold styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, .05);
+            transition: background .3s ease
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: 1px;
+            z-index: 1001
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            background: 0 0;
+            border: none;
+            cursor: pointer;
+            padding: .5rem;
+            z-index: 1001;
+            gap: 5px
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #2c3e50;
+            border-radius: 3px;
+            transition: all .3s ease
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color .3s;
+            position: relative
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #c9a961;
+            transition: width .3s ease
+        }
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 5%;
+            overflow: hidden
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .4);
+            z-index: 0
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, .5)
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, .5)
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: #fff;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all .3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3)
+        }
+
+        @media (max-width:768px) {
+            .hero h1 {
+                font-size: 2.5rem
+            }
+
+            .hamburger {
+                display: flex
+            }
+
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 0;
+                height: 100vh;
+                width: 280px;
+                background: #fff;
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                gap: 1.5rem;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, .1);
+                transition: right .3s ease;
+                z-index: 1000
+            }
+        }
+    </style>
+
+    <!-- Defer non-critical CSS -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+    </noscript>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">LUXE INTERIORS</div>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-overlay"></div>
+
+    <!-- HERO SECTION: Optimized with WebP and lazy loading -->
+    <section class="hero" id="home">
+        <!-- Hero background image - not lazy loaded for LCP optimization -->
+        <picture>
+            <source srcset="images/optimized/spacejoy-XpbtQfr9Skg-unsplash.webp" type="image/webp">
+            <img src="images/optimized/spacejoy-XpbtQfr9Skg-unsplash.jpg" alt="Luxury interior design" class="hero-bg"
+                width="1920" height="1080">
+        </picture>
+        <div class="hero-content">
+            <h1>Transform Your Space with Timeless Design</h1>
+            <p>Luxury interiors that blend comfort and sophistication</p>
+            <a href="#contact" class="cta-button">Start Your Journey</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">Creating Spaces That Tell Your Story</h2>
+        <p class="section-subtitle">We create spaces that reflect your lifestyle. Every detail is curated with balance,
+            beauty, and function.</p>
+
+        <div class="about-content">
+            <div class="about-card fade-in">
+                <h3>Our Philosophy</h3>
+                <p>Our approach combines contemporary aesthetics with timeless elegance, ensuring each project tells a
+                    unique story.</p>
+            </div>
+            <div class="about-card fade-in">
+                <h3>Our Experience</h3>
+                <p>With over a decade of experience in luxury interior design, we understand that your space should be
+                    an extension of your personality.</p>
+            </div>
+            <div class="about-card fade-in">
+                <h3>Our Process</h3>
+                <p>From concept to completion, we guide you through every step of the design journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Comprehensive Design Services</h2>
+        <p class="section-subtitle">From residential sanctuaries to commercial masterpieces, we bring vision to life</p>
+
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Residential Design</h3>
+                <p>Creating personalized living spaces that reflect your unique style and enhance daily life.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                </div>
+                <h3>Commercial Spaces</h3>
+                <p>Designing inspiring work environments that boost productivity and brand identity.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                        <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                    </svg>
+                </div>
+                <h3>Renovations</h3>
+                <p>Transforming existing spaces with strategic planning and innovative design solutions.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                        <line x1="7" y1="2" x2="7" y2="22"></line>
+                        <line x1="17" y1="2" x2="17" y2="22"></line>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <line x1="2" y1="7" x2="7" y2="7"></line>
+                        <line x1="2" y1="17" x2="7" y2="17"></line>
+                        <line x1="17" y1="17" x2="22" y2="17"></line>
+                        <line x1="17" y1="7" x2="22" y2="7"></line>
+                    </svg>
+                </div>
+                <h3>3D Visualization</h3>
+                <p>Bringing concepts to life with photorealistic renderings and virtual walkthroughs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION: Add your images here -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Our Portfolio</h2>
+        <p class="section-subtitle">Explore our portfolio of luxury residential and commercial projects that showcase
+            our commitment to exceptional design</p>
+
+        <div class="portfolio-grid">
+            <!-- Portfolio Item 1: Modern Residence -->
+            <div class="portfolio-item fade-in">
+                <picture>
+                    <source srcset="images/optimized/benyamin-bohlouli-LGXN4OSQSa4-unsplash-medium.webp"
+                        type="image/webp">
+                    <img src="images/optimized/benyamin-bohlouli-LGXN4OSQSa4-unsplash-medium.jpg"
+                        alt="Modern Residence luxury living" loading="lazy" width="800" height="600"
+                        style="width:100%;height:100%;object-fit:cover">
+                </picture>
+                <div class="portfolio-overlay">
+                    <h3>Modern Residence</h3>
+                    <p>Luxury living redefined</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 2: Corporate Office -->
+            <div class="portfolio-item fade-in">
+                <picture>
+                    <source srcset="images/optimized/jason-briscoe-UV81E0oXXWQ-unsplash-medium.webp" type="image/webp">
+                    <img src="images/optimized/jason-briscoe-UV81E0oXXWQ-unsplash-medium.jpg"
+                        alt="Corporate Office workspace design" loading="lazy" width="800" height="600"
+                        style="width:100%;height:100%;object-fit:cover">
+                </picture>
+                <div class="portfolio-overlay">
+                    <h3>Corporate Office</h3>
+                    <p>Innovative workspace design</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3: Boutique Hotel -->
+            <div class="portfolio-item fade-in"
+                style="background-image: url('images/pete-alexopoulos-qUreiZclR5o-unsplash.jpg')">
+                <div class="portfolio-overlay">
+                    <h3>Boutique Hotel</h3>
+                    <p>Elegant hospitality spaces</p>
+                </div>
+            </div>
+
+            <!-- Add more portfolio items by copying the structure above -->
+        </div>
+        <div class="more-projects-wrap">
+            <a href="projects.html" class="cta-button more-projects">See More Projects</a>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Don't just take our word for it</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">"They turned my apartment into a luxury retreat. The attention to detail and
+                    understanding of my lifestyle was exceptional. Every corner feels thoughtfully designed."</p>
+                <p class="testimonial-author">— Sarah Mitchell</p>
+            </div>
+            <div class="testimonial-card fade-in">
+                <p class="testimonial-text">"Our new office now feels like a brand statement. The design perfectly
+                    reflects our company values and has significantly improved our team's productivity and morale."</p>
+                <p class="testimonial-author">— James Anderson</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Ready to transform your space? Tell us about your project and we'll be in touch.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Contact Info</h3>
+                    <p><strong>Email:</strong> <a href="mailto:hello@luxeinteriors.com">hello@luxeinteriors.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    <p><strong>Address:</strong> 123 Design Ave, Suite 5, Cityville</p>
+                    <div class="contact-badges">
+                        <a href="#" aria-label="Instagram" class="badge">Instagram</a>
+                        <a href="#" aria-label="Pinterest" class="badge">Pinterest</a>
+                        <a href="#" aria-label="LinkedIn" class="badge">LinkedIn</a>
+                    </div>
+                </div>
+
+                <form class="contact-form fade-in" id="contact-form" name="contact" method="POST" data-netlify="true"
+                    novalidate>
+                    <input type="hidden" name="form-name" value="contact">
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required
+                        placeholder="Tell us about your project..."></textarea>
+
+                    <button type="submit" class="cta-button">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loader"></span>
+                    </button>
+                    <p class="form-status" id="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="site-footer">
+        <p>&copy; 2024 Luxe Interiors. All rights reserved.</p>
+        <p>Contact us to start your design journey</p>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
