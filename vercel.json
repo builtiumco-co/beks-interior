@@ -1,0 +1,5 @@
+{
+    "buildCommand": "node build-scripts/vercel-deploy.js",
+    "outputDirectory": "dist",
+    "framework": null
+}
